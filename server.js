@@ -28,7 +28,7 @@ app.post("/api/user", async (request, response) => {
   response.json(user)
 })
 
-// serviços => service-types
+// serviços => serviceTypes
 //   nome => name
 //   preço => price
 //   duração => duration
@@ -38,13 +38,13 @@ app.post("/api/user", async (request, response) => {
 //   raça => breed
 //   idade => age
 //   peso => weight
-//   nome do dono => owner_name
-//   é vacinado => is_vacinated
+//   nome do dono => owneName
+//   é vacinado => isVacinated
 
 // atendimentos => services
-//   serviço => service_type
+//   serviço => serviceType
 //   animal => animal
-//   data agendada => scheduled_date
+//   data agendada => scheduledDate
 
 app.listen(3000, () => {
   console.log(`Servidor está rodando em http://localhost:3000`)
