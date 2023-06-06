@@ -39,7 +39,7 @@ app.post("/api/user", async (request, response) => {
 //   idade => age
 //   peso => weight
 //   nome do dono => owneName
-//   é vacinado => isVacinated
+//   é vacinado => isVaccinated
 
 // atendimentos => services
 //   serviço => serviceType
