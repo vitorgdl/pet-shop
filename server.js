@@ -3,10 +3,7 @@ const { User } = require("./models")
 
 const app = express()
 app.use(express.json())
-
-app.use("/home", express.static("./index.html"))
-app.use("/index.css", express.static("./index.css"))
-app.use("/script.js", express.static("./script.js"))
+app.use("/", express.static("./views/home"))
 
 app.get("/api/user", async (request, response) => {
   const users = await User.findAll()
@@ -26,6 +23,25 @@ app.post("/api/user", async (request, response) => {
   const user = await User.create(newUser)
 
   response.json(user)
+})
+app.delete("/api/user/:id", function (request, response) {
+  if (!request.params.id) {
+    request
+      .status(400)
+      .send({ message: "É necessário um id para deletar um usuário" })
+    return
+  }
+
+  User.destroy({ where: { id: request.params.id } })
+    .then((data) => {
+      response.send({ deleteUsersCount: data })
+    })
+    .catch((erro) => {
+      response.status(500).send({
+        message:
+          erro.message || "Ocorreu erro ao tentar criar uma novo usuário.",
+      })
+    })
 })
 
 // serviços => serviceTypes
