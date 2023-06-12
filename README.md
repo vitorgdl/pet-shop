@@ -42,3 +42,5 @@ No arquivo HTML, dentro das colunas da tabela foi adicionado um novo <th> para a
 ![Código do script.js criando função que deleta o usuário](./imagensTutorial/deleteFunction.png)
 
 Por fim é criado a função deleteUser que é chamada no botão criado no passo 2, ela recebe o id do usuário a ser deletado e faz a chamada para a API com o método delete, e em seguida busca a linha das informações do usuário e remove o elemento da tela para atualizar a lista.
+
+## Agora criem a mesma funcionalidade para a página de serviços e animais!
