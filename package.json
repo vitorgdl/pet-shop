@@ -6,7 +6,6 @@
   "scripts": {
     "migrate": "npx sequelize-cli db:migrate",
     "start": "nodemon server.js",
-    "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,7 +15,6 @@
     "express": "^4.18.2",
     "fs-extra": "^11.1.1",
     "mysql2": "^3.3.3",
-    "pg": "^8.11.0",
     "sequelize": "^6.32.0"
   },
   "devDependencies": {
